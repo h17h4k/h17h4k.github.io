@@ -28,14 +28,16 @@
     .lead{max-width:650px;color:var(--muted);font-size:18px}
     h2{font-size:22px;margin:0 0 18px}
     .section{margin-top:58px}
-    .project{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:24px;background:linear-gradient(135deg,#192642,#141b2d);border:1px solid var(--line);border-radius:20px;text-decoration:none;transition:transform .2s,border-color .2s}
-    .project:hover{transform:translateY(-3px);border-color:#6e91dc}
-    .project h3{margin:0 0 6px;font-size:21px}
-    .project p{margin:0;color:var(--muted)}
-    .arrow{color:var(--accent);font-size:26px}
-    .tag{display:inline-block;margin-top:14px;padding:4px 10px;border:1px solid #40577f;border-radius:999px;color:#b9ccff;font-size:12px}
+    .featured-wrap{display:flex;justify-content:center;margin:42px auto 0}
+    .featured{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;width:min(100%,680px);min-height:190px;padding:34px 28px;text-align:center;text-decoration:none;color:#fff;background:linear-gradient(125deg,#ff512f 0%,#e12d3f 52%,#9d174d 100%);border:1px solid #ff8a72;border-radius:26px;box-shadow:0 18px 55px #e12d3f45,inset 0 1px #ffffff55;overflow:hidden;transition:transform .2s,box-shadow .2s}
+    .featured:before{content:"";position:absolute;inset:-70% 45% 10% -25%;background:linear-gradient(110deg,#ffffff30,transparent 65%);transform:rotate(12deg);pointer-events:none}
+    .featured:hover{transform:translateY(-5px) scale(1.01);box-shadow:0 24px 65px #e12d3f60,inset 0 1px #ffffff66}
+    .featured-kicker{font-size:12px;font-weight:850;letter-spacing:.18em;text-transform:uppercase;color:#ffe4dc}
+    .featured-title{font-size:clamp(25px,4.5vw,38px);font-weight:900;line-height:1.08;letter-spacing:-.035em}
+    .featured-subtitle{font-size:16px;color:#fff0ec}
+    .featured-action{display:inline-flex;align-items:center;gap:10px;margin-top:8px;padding:11px 22px;background:#fff;color:#a51f36;border-radius:999px;font-size:14px;font-weight:900;box-shadow:0 5px 18px #65112635}
     footer{padding:25px 0;border-top:1px solid #ffffff18;color:var(--muted);font-size:13px}
-    @media(max-width:560px){main{padding-top:55px}.project{padding:19px}.project h3{font-size:18px}}
+    @media(max-width:560px){main{padding-top:55px}.featured-wrap{margin-top:32px}.featured{min-height:175px;padding:28px 18px;border-radius:22px}.featured-subtitle{font-size:14px}}
   </style>
 </head>
 <body>
@@ -44,17 +46,14 @@
     <div class="eyebrow">Personal projects</div>
     <h1>Проекты.<br>Идеи. Разработка.</h1>
     <p class="lead">Личная страница проектов и небольших разработок. Здесь будут собраны полезные инструменты, эксперименты и законченные работы.</p>
-    <section class="section">
-      <h2>Мои проекты</h2>
-      <a class="project" href="https://h17h4k.github.io/bask-putorana/">
-        <div>
-          <h3>BASK Putorana V2</h3>
-          <p>Отдельная страница с фотографиями, характеристиками и информацией о пуховой парке.</p>
-          <span class="tag">Каталог / объявление</span>
-        </div>
-        <span class="arrow">↗</span>
+    <div class="featured-wrap">
+      <a class="featured" href="https://h17h4k.github.io/bask-putorana/" aria-label="Открыть страницу пуховика BASK Putorana V2">
+        <span class="featured-kicker">В центре внимания</span>
+        <span class="featured-title">Пуховик BASK<br>Putorana V2</span>
+        <span class="featured-subtitle">Красная пуховая парка · подробности и фотографии</span>
+        <span class="featured-action">Смотреть пуховик <span aria-hidden="true">↗</span></span>
       </a>
-    </section>
+    </div>
   </main>
   <footer><div class="wrap">© 2026 h17h4k · Личные проекты</div></footer>
 </body>
